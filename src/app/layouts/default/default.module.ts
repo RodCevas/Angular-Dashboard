@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { DefaultComponent } from './default.component';
 import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
-import { PostsComponent } from 'src/app/modules/posts/posts.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -12,16 +11,22 @@ import { ContactsComponent } from 'src/app/modules/contacts/contacts.component';
 import { MaterialModule } from 'src/app/material/material.module';
 import { SettingsComponent } from 'src/app/modules/settings/settings.component';
 import { FaqComponent } from 'src/app/modules/faq/faq.component';
+import { PostCreateComponent } from 'src/app/modules/posts/post-create/post-create.component';
+import { PostListComponent } from 'src/app/modules/posts/post-list/post-list.component';
+import { PostsComponent } from 'src/app/modules/posts/posts.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     DefaultComponent,
     DashboardComponent,
-    PostsComponent,
     ContactsComponent,
     SettingsComponent,
-    FaqComponent
+    FaqComponent,
+    PostCreateComponent,
+    PostListComponent,
+    PostsComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +34,9 @@ import { FaqComponent } from 'src/app/modules/faq/faq.component';
     SharedModule,
     HighchartsChartModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
     ],
   exports: [],
   providers: [
